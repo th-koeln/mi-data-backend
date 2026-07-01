@@ -1,0 +1,58 @@
+title: Abschlussarbeiten
+
+options:
+  changeStatus: false
+  changeTemplate: false
+  delete: false
+
+columns:
+  list:
+    width: 2/3
+    sections:
+      arbeiten:
+        type: pages
+        label: Einträge
+        template: abschlussarbeit
+        layout: table
+        search: true
+        columns:
+          lastname:
+            label: Studierende/r
+            value: "{{ page.firstname }} {{ page.lastname }}"
+            mobile: true
+            sortable: true
+          title:
+            label: Titel der Arbeit
+            mobile: true
+            sortable: true
+          first_supervisor:
+            label: Erstbetreuung
+            sortable: true
+          worktype:
+            label: Art
+            sortable: true
+            width: 1/8
+          date:
+            label: Jahr
+            value: "{{ page.date.toDate('Y') }}"
+            sortable: true
+            width: 1/10
+        sortBy: date desc
+        status: all
+        empty: Noch keine Einträge vorhanden.
+
+  sidebar:
+    width: 1/3
+    sections:
+      info:
+        type: info
+        theme: info
+        title: API-Endpunkte
+        text: |
+          **Alle veröffentlichten Einträge**
+          `GET /abschlussarbeiten`
+
+          **Einzelner Eintrag**
+          `GET /abschlussarbeiten/{slug}`
+
+          Einträge mit Status **Unveröffentlicht** erscheinen nicht in der API.

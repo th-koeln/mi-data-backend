@@ -1,0 +1,23 @@
+<?php
+
+/**
+ * Lokale Keycloak-Credentials – diese Datei kopieren nach config.local.php
+ * und NICHT in git committen.
+ *
+ * Redirect-URI im Keycloak-Client hinterlegen:
+ *   https://DEINE_DOMAIN/oauth/login/thkoeln
+ *
+ * onlyOauth / autoRedirect:
+ *   false (Standard) → normaler Kirby-Login + OAuth-Button sichtbar (lokal sinnvoll)
+ *   true             → ausschließlich OAuth, kein Passwort-Login (für Produktion)
+ */
+return [
+    'clientId'     => '',               // Client-ID aus dem Keycloak-Client
+    'clientSecret' => '',               // Client-Secret aus dem Keycloak-Client
+    'keycloakBase' => 'https://sso.th-koeln.de',  // Basis-URL des Keycloak-Servers
+    'realm'        => '',               // Name des Keycloak-Realms
+    'redirectUri'  => 'https://DEINE_DOMAIN/oauth/login/thkoeln',
+
+    'onlyOauth'    => false,            // true = nur Keycloak, kein Passwort-Login
+    'autoRedirect' => false,            // true = direkt zu Keycloak weiterleiten
+];

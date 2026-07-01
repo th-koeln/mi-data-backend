@@ -1,0 +1,8 @@
+title: MI Backend
+
+sections:
+  pages:
+    type: pages
+    label: Bereiche
+    templates:
+      - abschlussarbeiten

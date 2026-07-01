@@ -1,0 +1,12 @@
+RewriteEngine On
+RewriteBase /
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ index.php [L]
+
+# Verzeichnis-Listings deaktivieren
+Options -Indexes
+
+# Zugriff auf interne Verzeichnisse sperren
+RewriteRule ^(content|site|kirby)/(.*)$ - [F,L]

@@ -1,0 +1,14 @@
+# Kirby
+/kirby/
+/vendor/
+
+# Lokale Konfiguration (Credentials)
+/site/config/config.local.php
+
+# Kirby generierte Verzeichnisse
+/media/
+/site/cache/
+/site/sessions/
+
+# Betriebssystem
+.DS_Store

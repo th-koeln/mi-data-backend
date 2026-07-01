@@ -1,0 +1,84 @@
+Title: Konzeption und Implementierung einer web-basierten Plattform zur musikalischen Echtzeit-Kollaboration an Modular-Synthesizern
+
+----
+
+Worktype: Masterarbeit
+
+----
+
+Date: 2024-08-22
+
+----
+
+Workstatus: finished
+
+----
+
+Firstname: Sebastian
+
+----
+
+Lastname: Brock
+
+----
+
+First-supervisor: Prof. Dr. Theresa Schmiedel
+
+----
+
+Second-supervisor: Dr. Harald Nitz
+
+----
+
+Abstract: Diese Arbeit konzipiert und implementiert eine web-basierte Plattform, die musikbegeisterten Nutzern ermöglicht, in Echtzeit gemeinsam an Modular-Synthesizern zu arbeiten. Auf Basis von WebRTC und der Web Audio API entsteht ein kollaborativer virtueller Synthesizer-Raum.
+
+----
+
+Keywords: Web Audio API, Real-time Collaboration, Modular Synthesis, WebRTC, Music Technology
+
+----
+
+Thesis-url: thesis_sebastian_brock.pdf
+
+----
+
+Cooperation-partner: Ableton AG
+
+----
+
+Cooperation-partner-url: https://www.ableton.com/
+
+----
+
+Repository-url: https://github.com/sebastianbrock/modular-web-collab
+
+----
+
+Project-url: https://modular-collab-platform.io
+
+----
+
+Slideshow: true
+
+----
+
+Final-presentation-youtube-id: dQw4w9WgXcQ
+
+----
+
+Personal-website-url: https://sebastian-brock-music.com
+
+----
+
+Personal-social-media-urls:
+
+-
+  url: https://www.linkedin.com/in/sebastian-brock-music
+
+----
+
+Research-diary: false
+
+----
+
+Uuid: iY13sq1qdzlBcjb8

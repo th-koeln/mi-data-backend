@@ -1,0 +1,211 @@
+title: Abschlussarbeit
+
+options:
+  changeTemplate: false
+
+status:
+  draft: Unveröffentlicht
+  listed: Veröffentlicht
+
+tabs:
+  inhalt:
+    label: Inhalt
+    columns:
+      main:
+        width: 2/3
+        fields:
+          title:
+            type: text
+            label: Titel
+            required: true
+            help: Vollständiger Titel der Abschlussarbeit
+
+          abstract:
+            type: textarea
+            label: Abstract
+            help: Inhaltliche Zusammenfassung (Markdown wird unterstützt)
+            buttons:
+              - bold
+              - italic
+              - link
+              - orderedList
+              - unorderedList
+
+          keywords:
+            type: tags
+            label: Schlagwörter
+            help: Zur inhaltlichen Einordnung der Arbeit
+
+          awards:
+            type: structure
+            label: awards
+            help: Preise, awards oder besondere Anerkennungen
+            fields:
+              award:
+                type: text
+                label: Auszeichnung
+                required: true
+                placeholder: z. B. RTL-Preisgewinner 2025
+
+      sidebar:
+        width: 1/3
+        fields:
+          worktype:
+            type: select
+            label: Art der Arbeit
+            required: true
+            options:
+              - value: Praxisprojekt
+                text: Praxisprojekt
+              - value: Bachelorarbeit
+                text: Bachelorarbeit
+              - value: Masterarbeit
+                text: Masterarbeit
+
+          date:
+            type: date
+            label: Abgabedatum
+            required: true
+            display: YYYY-MM-DD
+            time: false
+
+          workstatus:
+            type: select
+            label: Bearbeitungsstatus
+            required: true
+            options:
+              - value: in-preparation
+                text: In Vorbereitung
+              - value: in-progress
+                text: In Bearbeitung
+              - value: in-evaluation
+                text: In Bewertung
+              - value: finished
+                text: Abgeschlossen
+
+  person:
+    label: Person
+    columns:
+      left:
+        width: 1/2
+        fields:
+          firstname:
+            type: text
+            label: Vorname
+            required: true
+
+          lastname:
+            type: text
+            label: Nachname
+            required: true
+
+          avatar_url:
+            type: url
+            label: Profilfoto-URL
+            help: Relativer Pfad oder absolute URL
+
+          personal_website_url:
+            type: url
+            label: Persönliche Website
+
+      right:
+        width: 1/2
+        fields:
+          personal_social_media_urls:
+            type: structure
+            label: Social-Media-Profile
+            fields:
+              url:
+                type: url
+                label: URL
+                required: true
+
+  betreuung:
+    label: Betreuung
+    columns:
+      left:
+        width: 1/2
+        fields:
+          first_supervisor:
+            type: text
+            label: Erstprüfung
+            required: true
+
+          second_supervisor:
+            type: text
+            label: Zweitprüfung
+            required: true
+
+      right:
+        width: 1/2
+        fields:
+          cooperation_partner:
+            type: text
+            label: Kooperationspartner
+
+          cooperation_partner_url:
+            type: url
+            label: Website des Kooperationspartners
+
+  medien:
+    label: Medien & Links
+    columns:
+      left:
+        width: 1/2
+        fields:
+          thesis_url:
+            type: url
+            label: PDF der Arbeit
+            help: Relativer Pfad oder absolute URL
+
+          teaser_image_url:
+            type: url
+            label: Teaserbild-URL
+            help: Relativer Pfad oder absolute URL
+
+          teaser_image_copyright:
+            type: text
+            label: Bild-Copyright
+            help: Pflichtfeld wenn Teaserbild gesetzt
+
+          avatar_url_hint:
+            type: info
+            theme: info
+            text: Das Profilfoto wird im Tab „Person" gepflegt.
+
+      right:
+        width: 1/2
+        fields:
+          repository_url:
+            type: url
+            label: Repository-URL
+
+          project_url:
+            type: url
+            label: Projekt-URL
+
+          final_presentation_youtube_id:
+            type: text
+            label: YouTube-Video-ID
+            help: 11-stellige ID aus dem YouTube-Link (z. B. dQw4w9WgXcQ)
+
+          slideshow:
+            type: toggle
+            label: Präsentation verfügbar
+            default: false
+            text:
+              - Nein
+              - Ja
+
+          research_diary:
+            type: toggle
+            label: Forschungstagebuch vorhanden
+            default: false
+            text:
+              - Nein
+              - Ja
+
+          related_folder:
+            type: text
+            label: Verknüpfter Ordner
+            help: z. B. der zugehörige Proposal-Eintrag
