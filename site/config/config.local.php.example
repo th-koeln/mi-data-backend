@@ -20,4 +20,5 @@ return [
 
     'onlyOauth'    => false,            // true = nur Keycloak, kein Passwort-Login
     'autoRedirect' => false,            // true = direkt zu Keycloak weiterleiten
+    'panelInstall' => true,             // false auf dem Server – sonst kann jeder den ersten Admin anlegen
 ];

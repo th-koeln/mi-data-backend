@@ -105,6 +105,8 @@ rsync -av --delete {user}@{server}:{pfad}/content/ ./content/
    | `keycloakBase` | Basis-URL des Keycloak-Servers, z. B. `https://sso.th-koeln.de` |
    | `realm` | Name des Keycloak-Realms |
    | `redirectUri` | Vollständige Redirect-URI inkl. Domain |
+   | `onlyOauth` / `autoRedirect` | Lokal `false`, auf dem Server `true` (nur Keycloak-Login) |
+   | `panelInstall` | Lokal `true`, auf dem Server `false` (sonst kann jeder den ersten Admin anlegen) |
 
 ## Datenmodell: Abschlussarbeit
 

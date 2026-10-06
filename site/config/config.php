@@ -16,7 +16,8 @@ return [
     'debug' => false,
 
     'panel' => [
-        'install' => true,
+        // Erstinstallation übers Panel nur lokal erlauben (config.local.php)
+        'install' => $cred['panelInstall'] ?? false,
     ],
 
     'content' => [
