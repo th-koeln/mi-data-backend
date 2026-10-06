@@ -49,23 +49,20 @@ function abschlussarbeit_to_array(Kirby\Cms\Page $page): array
         'lastname'          => $page->lastname()->value(),
         'first_supervisor'  => $page->first_supervisor()->value(),
         'second_supervisor' => $page->second_supervisor()->value(),
-        'slideshow'         => $page->slideshow()->toBool(),
-        'research_diary'    => $page->research_diary()->toBool(),
     ];
 
     // Optionale Felder: nur einschließen wenn belegt
     $optional = [
         'abstract'                      => $opt($page->abstract()),
         'keywords'                      => $keywords,
-        'thesis_url'                    => $opt($page->thesis_url()),
-        'teaser_image_url'              => $opt($page->teaser_image_url()),
+        'thesis_url'                    => ($page->thesis_file()->toFile()?->url()) ?? $opt($page->thesis_url()),
+        'teaser_image_url'              => ($page->teaser_image()->toFile()?->url()) ?? $opt($page->teaser_image_url()),
         'teaser_image_copyright'        => $opt($page->teaser_image_copyright()),
         'avatar_url'                    => $opt($page->avatar_url()),
         'repository_url'                => $opt($page->repository_url()),
         'project_url'                   => $opt($page->project_url()),
         'final_presentation_youtube_id' => $opt($page->final_presentation_youtube_id()),
-        'awards'                => $awards,
-        'related_folder'                => $opt($page->related_folder()),
+        'awards'                        => $awards,
         'personal_website_url'          => $opt($page->personal_website_url()),
         'personal_social_media_urls'    => $socialUrls,
         'cooperation_partner'           => $opt($page->cooperation_partner()),

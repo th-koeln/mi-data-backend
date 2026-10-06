@@ -23,6 +23,22 @@ return [
         'locking' => false,
     ],
 
+    'hooks' => [
+        'page.update:before' => function ($page, $values) {
+            if ($page->intendedTemplate()->name() !== 'abschlussarbeit') {
+                return;
+            }
+            // files-Feld liefert ein Array, kein String
+            $hasUpload = !empty($values['teaser_image']);
+            $hasUrl    = !empty(trim($values['teaser_image_url'] ?? ''));
+            if (!$hasUpload && !$hasUrl) {
+                throw new \Kirby\Exception\Exception(
+                    'Ein Teaserbild ist erforderlich – bitte ein Bild hochladen oder eine externe URL angeben.'
+                );
+            }
+        },
+    ],
+
     'thathoff.oauth' => [
         'providers' => [
             'thkoeln' => [

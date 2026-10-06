@@ -153,20 +153,34 @@ tabs:
       left:
         width: 1/2
         fields:
+          thesis_file:
+            type: files
+            label: PDF der Arbeit (Upload)
+            max: 1
+            uploads: true
+            help: PDF direkt hochladen
+
           thesis_url:
             type: url
-            label: PDF der Arbeit
-            help: Relativer Pfad oder absolute URL
+            label: PDF der Arbeit (externe URL)
+            help: Alternative zum Upload – wird ignoriert wenn eine Datei hochgeladen ist
+
+          teaser_image:
+            type: files
+            label: Teaserbild (Upload)
+            max: 1
+            uploads: true
+            help: Bild direkt hochladen (JPG, PNG, WebP)
 
           teaser_image_url:
             type: url
-            label: Teaserbild-URL
-            help: Relativer Pfad oder absolute URL
+            label: Teaserbild (externe URL)
+            help: Alternative zum Upload – wird ignoriert wenn ein Bild hochgeladen ist
 
           teaser_image_copyright:
             type: text
             label: Bild-Copyright
-            help: Pflichtfeld wenn Teaserbild gesetzt
+            required: true
 
           avatar_url_hint:
             type: info
@@ -189,23 +203,3 @@ tabs:
             label: YouTube-Video-ID
             help: 11-stellige ID aus dem YouTube-Link (z. B. dQw4w9WgXcQ)
 
-          slideshow:
-            type: toggle
-            label: Präsentation verfügbar
-            default: false
-            text:
-              - Nein
-              - Ja
-
-          research_diary:
-            type: toggle
-            label: Forschungstagebuch vorhanden
-            default: false
-            text:
-              - Nein
-              - Ja
-
-          related_folder:
-            type: text
-            label: Verknüpfter Ordner
-            help: z. B. der zugehörige Proposal-Eintrag

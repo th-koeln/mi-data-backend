@@ -129,16 +129,13 @@ rsync -av --delete {user}@{server}:{pfad}/content/ ./content/
 | `abstract` | string | Zusammenfassung (Markdown) |
 | `keywords` | string[] | Schlagwörter |
 | `awards` | string[] | Auszeichnungen, z. B. `RTL-Preisgewinner 2025` |
-| `thesis_url` | string | PDF der Arbeit (Pfad oder URL) |
-| `teaser_image_url` | string | Teaserbild (Pfad oder URL) |
-| `teaser_image_copyright` | string | Copyright-Angabe zum Teaserbild |
+| `thesis_url` | string | PDF der Arbeit (Upload oder externe URL; Upload hat Vorrang) |
+| `teaser_image_url` | string | Teaserbild (Upload oder externe URL; Upload hat Vorrang) – im Panel Pflicht |
+| `teaser_image_copyright` | string | Copyright-Angabe zum Teaserbild – im Panel Pflicht |
 | `avatar_url` | string | Profilfoto (Pfad oder URL) |
 | `repository_url` | uri | Repository-URL |
 | `project_url` | uri | Projekt- oder Demo-URL |
-| `slideshow` | boolean | Präsentation verfügbar |
 | `final_presentation_youtube_id` | string | YouTube-Video-ID (11-stellig) |
-| `research_diary` | boolean | Forschungstagebuch vorhanden |
-| `related_folder` | string | Verknüpfter Ordner (z. B. Proposal) |
 | `personal_website_url` | uri | Persönliche Website |
 | `personal_social_media_urls` | uri[] | Social-Media-Profile |
 | `cooperation_partner` | string | Name des Kooperationspartners |
