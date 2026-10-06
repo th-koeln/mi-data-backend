@@ -66,6 +66,22 @@ mi-kirby-backend/
 
 Neue Abschlussarbeiten erhalten im Panel automatisch eine URL aus dem Titel. Veröffentlichung erfolgt über den Status-Schalter im Panel (Unveröffentlicht / Veröffentlicht).
 
+## Was nicht im Repository liegt
+
+| Pfad | Grund |
+|---|---|
+| `content/` | Inhalte werden im Produktiv-Panel gepflegt – der Server ist die maßgebliche Quelle. |
+| `site/accounts/` | Benutzerkonten sind pro Umgebung verschieden und enthalten Passwort-Hashes. |
+| `site/config/config.local.php` | Credentials und umgebungsspezifische Einstellungen. |
+
+Aktuelle Inhalte vom Server holen (überschreibt lokale Inhalte):
+
+```bash
+rsync -av --delete {user}@{server}:{pfad}/content/ ./content/
+```
+
+**Achtung beim Deployment per `git pull`:** `content/` und `site/accounts/` waren früher eingecheckt. Ein Server, der noch einen alten Stand hat, verliert diese Dateien beim nächsten Pull. Vorher sichern.
+
 ## Keycloak SSO einrichten
 
 1. `site/config/config.local.php` aus der Vorlage anlegen:

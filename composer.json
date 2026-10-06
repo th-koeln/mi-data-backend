@@ -6,7 +6,10 @@
         "thathoff/kirby-oauth": "^3.5"
     },
     "scripts": {
-        "dev": "php -S localhost:8000 kirby/router.php"
+        "dev": [
+            "Composer\\Config::disableProcessTimeout",
+            "php -S localhost:8000 kirby/router.php"
+        ]
     },
     "config": {
         "allow-plugins": {

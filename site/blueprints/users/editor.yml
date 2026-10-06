@@ -1,0 +1,23 @@
+title: Redaktion
+description: Darf Inhalte pflegen, aber keine Benutzer oder Systemeinstellungen ändern.
+
+permissions:
+  access:
+    panel: true
+    site: true
+    account: true
+    users: false
+    system: false
+    languages: false
+
+  site:
+    changeTitle: false
+
+  # Eigenes Konto: Login läuft über Keycloak, E-Mail ist der Schlüssel
+  user:
+    changeEmail: false
+    changePassword: false
+    changeRole: false
+    delete: false
+
+  users: false

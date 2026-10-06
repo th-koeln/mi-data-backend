@@ -40,9 +40,11 @@ return [
         // Nur TH-Köln-Adressen zulassen
         'domainWhitelist' => ['th-koeln.de'],
 
-        // Neuanlage automatisch, Rolle wird unten gesetzt
+        // Neuanlage automatisch: Whitelist → admin, alle anderen → editor
+        // (Rolle gilt nur bei Neuanlage, bestehende Konten behalten ihre Rolle)
         'onlyExistingUsers' => false,
-        'defaultRole'       => 'admin',
+        'defaultRole'       => 'editor',
+        'adminWhitelist'    => ['christian.noss@th-koeln.de'],
 
         // Lokal: false (Standard-Kirby-Login aktiv)
         // Produktion: in config.local.php auf true setzen

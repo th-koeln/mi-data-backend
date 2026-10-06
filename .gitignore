@@ -12,3 +12,12 @@
 
 # Betriebssystem
 .DS_Store
+
+# Lokale Notizen (interne URLs etc.)
+*.local.md
+
+# Benutzerkonten (pro Umgebung, enthalten Passwort-Hashes)
+/site/accounts/
+
+# Inhalte (maßgeblich ist der Produktiv-Server, lokal per rsync holen)
+/content/
