@@ -24,6 +24,14 @@ return [
         'locking' => false,
     ],
 
+    // Startseite ohne Content-Ordner (content/ ist nicht im Repo)
+    'routes' => [
+        [
+            'pattern' => '/',
+            'action'  => fn () => snippet('home', [], true),
+        ],
+    ],
+
     'hooks' => [
         'page.update:before' => function ($page, $values) {
             if ($page->intendedTemplate()->name() !== 'abschlussarbeit') {
