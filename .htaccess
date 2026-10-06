@@ -1,4 +1,5 @@
 RewriteEngine On
+# Produktiv unter /kirby (Alias). Lokal (composer dev) wird die .htaccess nicht genutzt.
 RewriteBase /kirby
 
 RewriteCond %{REQUEST_FILENAME} !-f
