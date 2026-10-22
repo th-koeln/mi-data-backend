@@ -1,7 +1,12 @@
 title: Abschlussarbeiten
 
 options:
-  changeStatus: false
+  # Vorübergehend für alle Rollen freigegeben.
+  # Später wieder einschränken auf:
+  #   changeStatus:
+  #     admin: true
+  #     "*": false
+  changeStatus: true
   changeTemplate: false
   delete: false
 
