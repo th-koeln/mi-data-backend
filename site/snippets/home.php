@@ -42,10 +42,19 @@
     <h2>Fragen?</h2>
     <p>
       Bei Fragen zum Backend oder zur API wenden Sie sich bitte an
-      Christian Noss: <a href="mailto:christian.noss@th-koeln.de">christian.noss@th-koeln.de</a>
+      Christian Noss:
+      <a class="js-mail" data-user="christian.noss" data-domain="th-koeln.de" href="#">christian.noss [at] th-koeln.de</a>
     </p>
 
     <footer>mi-data-backend · <a href="https://www.medieninformatik.th-koeln.de/">medieninformatik.th-koeln.de</a></footer>
   </main>
+  <script>
+    // Adresse erst im Browser zusammensetzen (Schutz vor Adress-Sammlern)
+    document.querySelectorAll('.js-mail').forEach((a) => {
+      const mail = a.dataset.user + '@' + a.dataset.domain;
+      a.href = 'mailto:' + mail;
+      a.textContent = mail;
+    });
+  </script>
 </body>
 </html>
