@@ -13,7 +13,7 @@ $realm        = $cred['realm'] ?? '';
 $oidcBase     = $keycloakBase . '/realms/' . $realm . '/protocol/openid-connect';
 
 return [
-    'debug' => true,
+    'debug' => false,
 
     'panel' => [
         // Erstinstallation übers Panel nur lokal erlauben (config.local.php)
