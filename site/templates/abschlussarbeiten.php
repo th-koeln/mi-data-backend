@@ -1,7 +1,8 @@
 <?php
 
-header('Content-Type: application/json; charset=utf-8');
-header('Access-Control-Allow-Origin: *');
+// Header über Kirby setzen – direkte header()-Aufrufe überschreibt Kirby mit text/html
+$kirby->response()->type('application/json');
+$kirby->response()->header('Access-Control-Allow-Origin', '*');
 
 $items = [];
 foreach ($page->children()->listed()->sortBy('date', 'desc') as $child) {
