@@ -11,3 +11,10 @@ Options -Indexes
 
 # Zugriff auf interne Verzeichnisse sperren
 RewriteRule ^(content|site|kirby)/(.*)$ - [F,L]
+
+# Öffentliche JSON-API: der Server setzt global Access-Control-Allow-Credentials: true.
+# Zusammen mit Allow-Origin: * ist das ungültig – für /kirby entfernen.
+<IfModule mod_headers.c>
+  Header unset Access-Control-Allow-Credentials
+  Header always unset Access-Control-Allow-Credentials
+</IfModule>
